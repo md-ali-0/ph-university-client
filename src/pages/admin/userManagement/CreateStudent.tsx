@@ -72,7 +72,7 @@ const CreateStudent = () => {
             lastName: "Doe",
         },
         gender: "male",
-        age: 22,
+        age: "22",
         email: "john.doe@gmail.com",
         contact: "+1234567890",
         bloodGroup: "AB+",

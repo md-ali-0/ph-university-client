@@ -116,6 +116,7 @@ const StudentData = () => {
             />
             <Pagination
                 current={page}
+                showQuickJumper
                 onChange={(value) => setPage(value)}
                 pageSize={metaData?.limit}
                 total={metaData?.total}
