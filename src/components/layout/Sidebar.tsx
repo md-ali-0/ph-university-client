@@ -10,42 +10,49 @@ const { Sider } = Layout;
 const userRole = {
     ADMIN: "admin",
     FACULTY: "faculty",
-    STUDENT: 'student',
-}
+    STUDENT: "student",
+};
 
 const Sidebar = () => {
     const user = useAppSelector(selectCurrentUser);
-    let sidebarItems 
+    let sidebarItems;
 
-    switch(user!.role){
+    switch (user!.role) {
         case userRole.ADMIN:
-            sidebarItems = sidebarItemsGenerator(adminPaths, userRole.ADMIN)
-            break
+            sidebarItems = sidebarItemsGenerator(adminPaths, userRole.ADMIN);
+            break;
         case userRole.FACULTY:
-            sidebarItems = sidebarItemsGenerator(facultyPaths, userRole.FACULTY)
-            break
+            sidebarItems = sidebarItemsGenerator(
+                facultyPaths,
+                userRole.FACULTY
+            );
+            break;
         case userRole.STUDENT:
-            sidebarItems = sidebarItemsGenerator(facultyPaths, userRole.STUDENT)
-            break
-        default :
-            break
+            sidebarItems = sidebarItemsGenerator(
+                facultyPaths,
+                userRole.STUDENT
+            );
+            break;
+        default:
+            break;
     }
-
 
     return (
         <Sider
             breakpoint="lg"
             collapsedWidth="0"
+            style={{ height: "100vh", position: "sticky", top: "0", left: "0" }}
         >
             <div
                 style={{
                     color: "white",
-                    textAlign: "center",
-                    padding: "18px 0",
-                    borderBottom: "1px solid #000"
+                    height: "4rem",
+                    display: "flex",
+                    justifyContent: "center",
+                    alignItems: "center",
                 }}
             >
-                <h3 style={{ fontSize: "20px" }}>PH University</h3>
+                <h1>PH Uni</h1>
             </div>
             <Menu
                 theme="dark"

@@ -1,4 +1,4 @@
-import CreateStudent from "../pages/admin/CreateStudent";
+import CreateStudent from "../pages/admin/userManagement/CreateStudent";
 import FacultyDashboard from "../pages/faculty/FacultyDashboard";
 
 export const facultyPaths = [
@@ -18,4 +18,4 @@ export const facultyPaths = [
             },
         ],
     },
-]
+];
